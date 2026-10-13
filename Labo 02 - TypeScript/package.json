@@ -1,0 +1,14 @@
+{
+  "name": "typescript-oefening",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "typecheck": "tsc --noEmit",
+    "build": "tsc",
+    "start": "node dist/typescript-starter.js"
+  },
+  "devDependencies": {
+    "typescript": "5.9.3"
+  }
+}
