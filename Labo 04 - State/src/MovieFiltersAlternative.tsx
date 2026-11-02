@@ -20,16 +20,18 @@ const MovieFiltersAlternative = ({
         placeholder="Zoek op titel"
         value={filters.searchTerm}
         onChange={(event) => {
+          const searchTerm = event.currentTarget.value;
+
           setFilters((prevFilters) => ({
             ...prevFilters,
-            searchTerm: event.target.value,
+            searchTerm: searchTerm,
           }));
         }}
       />
       <select
         value={filters.selectedGenreId}
         onChange={(event) => {
-          const selectedGenre = event.target.value;
+          const selectedGenre = event.currentTarget.value;
           setFilters((prevFilters) => ({
             ...prevFilters,
             selectedGenreId:
@@ -58,9 +60,11 @@ const MovieFiltersAlternative = ({
           type="checkbox"
           checked={filters.onlyActiveMovies}
           onChange={(event) => {
+            const onlyActiveMovies = event.currentTarget.checked;
+
             setFilters((prevFilters) => ({
               ...prevFilters,
-              onlyActiveMovies: event.target.checked,
+              onlyActiveMovies: onlyActiveMovies,
             }));
           }}
         />

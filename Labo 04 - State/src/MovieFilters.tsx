@@ -27,13 +27,13 @@ const MovieFilters = ({
         placeholder="Zoek op titel"
         value={searchTerm}
         onChange={(event) => {
-          setSearchTerm(event.target.value);
+          setSearchTerm(event.currentTarget.value);
         }}
       />
       <select
         value={selectedGenredId}
         onChange={(event) => {
-          const selectedGenre = event.target.value;
+          const selectedGenre = event.currentTarget.value;
           setSelectedGenreId(
             selectedGenre !== "Alle genres"
               ? parseInt(selectedGenre, 10)
@@ -60,7 +60,7 @@ const MovieFilters = ({
           type="checkbox"
           checked={onlyActive}
           onChange={(event) => {
-            setOnlyActive(event.target.checked);
+            setOnlyActive(event.currentTarget.checked);
           }}
         />
       </div>
